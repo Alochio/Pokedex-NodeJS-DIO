@@ -1,6 +1,8 @@
 .modalDetails {
-    align-items: center;
+    width: 80%;
+    height: 100%;
     text-align: center;
+    margin: 0 auto;
     padding: 4rem;
     border-radius: 1rem;
     border: 1px solid black;
@@ -8,7 +10,7 @@
 }
 
 .modalDetails img {
-    width: 5rem;
+    width: 13rem;
 }
 
 .modalDetails p {
