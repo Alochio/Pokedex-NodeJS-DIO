@@ -21,4 +21,4 @@ Este repositório contém o projeto que eu realizei para um bootcamp de JavaScri
 
 
 ## Veja como ficou:
-Link do GitHub pages:
+Link do GitHub pages: [Pokédex](https://alochio.github.io/Pokedex-NodeJS-DIO/)
