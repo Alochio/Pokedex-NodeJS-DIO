@@ -1,18 +1,17 @@
 .modalDetails {
-    width: 100%;
     align-items: center;
     text-align: center;
     padding: 4rem;
     border-radius: 1rem;
-    background: aquamarine;
     border: 1px solid black;
+    text-transform: capitalize;
 }
 
 .modalDetails img {
     width: 5rem;
 }
 
-.modalDetails p{
+.modalDetails p {
     font-weight: bolder;
     margin: 0;
 }
