@@ -31,12 +31,13 @@ function loadPokemonItens(offset, limit) {
       .join("");
     pokemonList.innerHTML += newHtml;
 
-
     // Adiciona um evento de clique a cada elemento
     var openModalElements = document.getElementsByClassName("openModal");
     for (var i = 0; i < openModalElements.length; i++) {
       openModalElements[i].addEventListener("click", function () {
-        alert("Você clicou em um item! ");
+        var modalElement = document.getElementById("exampleModal");
+        var modal = new bootstrap.Modal(modalElement);
+        modal.show();
       });
     }
   });
