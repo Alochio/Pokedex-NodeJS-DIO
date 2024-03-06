@@ -164,9 +164,9 @@
 
 .pagination button:hover {
     cursor: pointer;
-    background-color: transparent;
-    border-color: #45a049;
-    color: #45a049;
+    background-color: #29812e;
+    border-color: #29812e;
+    color: #ffffff;
 }
 
 @media screen and (max-width: 379px) {
