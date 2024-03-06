@@ -5,7 +5,6 @@ const maxRecords = 200; //Limite máximo de exibir pokemons
 const limit = 12;
 let offset = 0;
 
-debugger
 function loadPokemonItens(offset, limit) {
   pokeApi.getPokemons(offset, limit).then((pokemons = []) => {
     const newHtml = pokemons
