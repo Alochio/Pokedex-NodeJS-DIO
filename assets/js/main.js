@@ -10,7 +10,7 @@ function loadPokemonItens(offset, limit) {
     const newHtml = pokemons
       .map(
         (pokemon) => `
-             <li class="pokemon ${pokemon.type}">
+             <li class="pokemon openModal ${pokemon.type}">
                   <span class="number">#${pokemon.number}</span>
                   <span class="name">${pokemon.name}</span>
                   <div class="detail">
@@ -30,6 +30,15 @@ function loadPokemonItens(offset, limit) {
       )
       .join("");
     pokemonList.innerHTML += newHtml;
+
+
+    // Adiciona um evento de clique a cada elemento
+    var openModalElements = document.getElementsByClassName("openModal");
+    for (var i = 0; i < openModalElements.length; i++) {
+      openModalElements[i].addEventListener("click", function () {
+        alert("Você clicou em um item! ");
+      });
+    }
   });
 }
 
