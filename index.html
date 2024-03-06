@@ -18,15 +18,10 @@
     <header>
         <h1>Pokédex</h1>
     </header>
-
     <ol id="pokemonList" class="pokemons"></ol>
-
-
     <div class="pagination">
         <button id="loadMoreButton" type="button">Ver mais</button>
     </div>
-
-    <!--Modal-->
     <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
@@ -34,8 +29,10 @@
                     <h5 class="modal-title" id="exampleModalLabel">Pokémon selecionado</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
-                <div class="modal-body modalDetails" id="modalDetails"> <!-- Esta é a seção que contém o conteúdo do modal -->
-                    <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/23.svg" alt="Ekans">
+                <div class="modal-body modalDetails" id="modalDetails">
+                    <!-- Esta é a seção que contém o conteúdo do modal -->
+                    <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/23.svg"
+                        alt="Ekans">
                     <h1 id="modalName"></h1>
                     <p></p>
                     <p></p>
@@ -46,11 +43,6 @@
             </div>
         </div>
     </div>
-    
-
-
-
-
 </section>
 <script src="./assets/js/pokemon-model.js"></script>
 <script src="./assets/js/poke-api.js"></script>

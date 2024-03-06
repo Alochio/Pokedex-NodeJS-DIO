@@ -5,7 +5,7 @@ function convertPokeApiDatailToPokemon(pokeDatail) {
   pokemon.number = pokeDatail.order;
   pokemon.name = pokeDatail.name;
   pokemon.types = pokeDatail.types.map((typeSlot) => typeSlot.type.name);
-  pokemon.type = pokemon.types.length > 0 ? pokemon.types[0] : '';
+  pokemon.type = pokemon.types.length > 0 ? pokemon.types[0] : "";
   pokemon.photo = pokeDatail.sprites.other.dream_world.front_default;
 
   return pokemon;

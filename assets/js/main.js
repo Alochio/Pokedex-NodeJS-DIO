@@ -1,16 +1,16 @@
 const pokemonList = document.getElementById(`pokemonList`);
 const loadMoreButton = document.getElementById("loadMoreButton");
 
-const maxRecords = 200; //Limite máximo de exibir pokemons
+const maxRecords = 200;
 const limit = 10;
 let offset = 0;
-let pokemons = []; // Adicione esta linha
+let pokemons = [];
 
-function createModalOpener() { // Remova o argumento 'pokemon'
+function createModalOpener() {
   return function (event) {
     var index = event.currentTarget.dataset.index;
-    var pokemon = pokemons[index]; // Agora 'pokemons' é acessível aqui
-    
+    var pokemon = pokemons[index];
+
     var modalElement = document.getElementById("exampleModal");
     var modal = new bootstrap.Modal(modalElement);
 
@@ -31,7 +31,6 @@ function createModalOpener() { // Remova o argumento 'pokemon'
     var pokemonType = pokemon.types[0];
     var modalElement = document.getElementById("modalDetails");
 
-    // Lista de todas as classes de tipo de Pokémon
     var pokemonTypes = [
       "normal",
       "grass",
@@ -53,25 +52,25 @@ function createModalOpener() { // Remova o argumento 'pokemon'
       "fairy",
     ];
 
-    // Remove todas as classes de tipo de Pokémon
     for (var i = 0; i < pokemonTypes.length; i++) {
       modalElement.classList.remove(pokemonTypes[i]);
     }
 
-    // Adiciona a classe do tipo de Pokémon atual
     modalElement.classList.add(pokemonType);
-    
+
     modal.show();
   };
 }
 
 function loadPokemonItens(offset, limit) {
   pokeApi.getPokemons(offset, limit).then((newPokemons = []) => {
-    pokemons = pokemons.concat(newPokemons); // Concatene 'newPokemons' à variável 'pokemons' existente
+    pokemons = pokemons.concat(newPokemons);
     const newHtml = newPokemons
       .map(
         (pokemon, index) => `
-             <li class="pokemon openModal ${pokemon.type}" data-index="${index + offset}">
+             <li class="pokemon openModal ${pokemon.type}" data-index="${
+          index + offset
+        }">
                   <span class="number">#${pokemon.number}</span>
                   <span class="name">${pokemon.name}</span>
                   <div class="detail">
@@ -92,10 +91,8 @@ function loadPokemonItens(offset, limit) {
       .join("");
     pokemonList.innerHTML += newHtml;
 
-    // Obtenha todos os elementos abertos do modal
     var openModalElements = document.querySelectorAll(".openModal");
 
-    // Adicione o evento de clique a cada elemento
     openModalElements.forEach((element) => {
       element.addEventListener("click", createModalOpener());
     });

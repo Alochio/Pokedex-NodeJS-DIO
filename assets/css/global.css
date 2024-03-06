@@ -7,24 +7,24 @@
     box-sizing: border-box;
 }
 
-.content{
+.content {
     width: 100%;
     padding: 1rem;
     background-color: #cc2f3b;
     height: 100%;
 }
 
-.content header{
+.content header {
     background-image: url(https://i0.wp.com/www.coliseugeek.com.br/wp-content/uploads/2023/01/6776c-clickwallpapers-pokemon-4k-img2-scaled-1.jpg?resize=1024%2C576&ssl=1);
     max-width: 100%;
-    background-size:contain;
+    background-size: contain;
     height: 10rem;
     display: flex;
     align-items: center;
     border-radius: 1rem 1rem 0 0;
 }
 
-.content h1{
+.content h1 {
     font-size: 3rem;
     color: #ffffff;
     text-align: center;
@@ -36,14 +36,14 @@
 }
 
 @media screen and (max-width: 379px) {
-    .content h1{
-        font-size: 2rem; 
+    .content h1 {
+        font-size: 2rem;
     }
 }
 
 
-@media screen and (min-width: 992px){
-    .content{
+@media screen and (min-width: 992px) {
+    .content {
         max-width: 992px;
         height: auto;
         margin: 1rem auto;
